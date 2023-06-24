@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragment_home">
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.example.a5alaty.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragment_home_to_qiblaFragment"
+            app:destination="@id/qiblaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/qiblaFragment"
+        android:name="com.example.a5alaty.ui.fragments.QiblaFragment"
+        android:label="fragment_qibla"
+        tools:layout="@layout/fragment_qibla" >
+
+        <argument
+            android:name="lat_args"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="long_args"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="altitued_args"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="address_args"
+            app:argType="string" />
+
+        <argument
+            android:name="date_args"
+            app:argType="string" />
+    </fragment>
+</navigation>
